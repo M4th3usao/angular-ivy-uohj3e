@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-counter',
   templateUrl: './counter.component.html',
-  styleUrls: ['./counter.component.css']
+  styleUrls: ['./counter.component.css'],
 })
 export class CounterComponent implements OnInit {
+  @Input() name: string;
 
-  constructor() { }
+  private counter: number = 0;
 
-  ngOnInit() {
+  constructor() {}
+
+  ngOnInit() {}
+
+  getCounter() {
+    return this.counter;
   }
-
 }
