@@ -17,4 +17,8 @@ export class CounterComponent implements OnInit {
   getCounter() {
     return this.counter;
   }
+
+  increment() {
+    this.counter++;
+  }
 }
